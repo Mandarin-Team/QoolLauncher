@@ -34,4 +34,12 @@ public class Config {
         return props.getProperty(key);
     }
 
+    public static void set(String key, String value)throws IOException{
+        props.setProperty(key, value);
+
+        try (BufferedWriter writer = Files.newBufferedWriter(CONFIG_PATH)){
+            props.store(writer, null);
+        }
+    }
+
 }

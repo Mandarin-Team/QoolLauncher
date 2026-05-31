@@ -12,10 +12,10 @@ public class Main {
         System.out.println("Запуск");
 
         //ConnectionCheck
-//        if (Utils.ConnectionCheck() == false){
-//            System.err.println("Не удалось подключиться к серверу");
-//            System.exit(1);
-//            }
+        if (Utils.ConnectionCheck() == false){
+            System.err.println("Не удалось подключиться к серверу");
+            System.exit(1);
+            }
 
         //Folder
         try {
@@ -38,5 +38,9 @@ public class Main {
 
         String version = Config.get("version");
         System.out.println(version);
+
+        Config.set("version", "1.0.1");
+        String version1 = Config.get("version");
+        System.out.println(version1);
     }
 }
