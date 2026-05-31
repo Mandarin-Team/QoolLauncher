@@ -1,4 +1,4 @@
-package wtf.foximus.qoollauncher.utils.Folder;
+package wtf.foximus.qoollauncher.utils.folder;
 
 import java.io.IOException;
 import java.nio.file.Files;
