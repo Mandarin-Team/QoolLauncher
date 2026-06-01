@@ -1,6 +1,7 @@
 package wtf.foximus.qoollauncher;
 
 import wtf.foximus.qoollauncher.utils.config.Config;
+import wtf.foximus.qoollauncher.utils.discord.RPC;
 import wtf.foximus.qoollauncher.utils.folder.Folder;
 import wtf.foximus.qoollauncher.utils.Utils;
 
@@ -10,6 +11,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         System.out.println("Запуск");
+        RPC.startRPC();
 
         //ConnectionCheck
         if (Utils.ConnectionCheck() == false){
@@ -36,6 +38,7 @@ public class Main {
             System.err.println(("Не удалось создать файл конфигурации"));
         }
 
+        Config.set("version", "1.0.0");
         String version = Config.get("version");
         System.out.println(version);
 
